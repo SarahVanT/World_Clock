@@ -1,29 +1,25 @@
-// function showSelectedCountry(event) {
+// Los Angeles
+function updateTime(){
+    let losAngelesElement = document.querySelector("#los-angeles");
+    let losAngelesDateElement = losAngelesElement.querySelector(".date");
+    let losAngelesTimeElement = losAngelesElement.querySelector(".time");
+    let losAngelesMomentTime = moment().tz("America/Los_Angeles");
 
-//     if (event.target.value.length > 0) {
-//         let currentTime = moment()
-//             .tz(event.target.value)
-//             .format("dddd, MMMM D, YYYY h:mm A");
+    losAngelesDateElement.innerHTML = losAngelesMomentTime.format("MMMM Do YYYY");
+    losAngelesTimeElement.innerHTML = `${losAngelesMomentTime.format("h:mm:ss [<small>]A[</small>]"
+    )}`;
+    
+    // Paris
+    let parisElement = document.querySelector("#paris");
+    let parisDateElement = parisElement.querySelector(".date");
+    let parisTimeElement = parisElement.querySelector(".time");
+    let parisMomentTime = moment().tz("Europe/Paris");
 
-//         alert(`It is ${currentTime} in ${event.target.value}`);
-//     }
-// }
+    parisDateElement.innerHTML = parisMomentTime.format("MMMM Do YYYY");
+    parisTimeElement.innerHTML = `${parisMomentTime.format("h:mm:ss [<small>]A[</small>]"
+    )}`;
+    }
 
-//     // let parisTime = moment().tz("Europe/Paris").format("dddd, MMMM D, YYYY hh:mm A");
-//     // let tokyoTime = moment().tz("Asia/Tokyo").format("dddd, MMMM D, YYYY hh:mm A");
-//     // let sydneyTime = moment().tz("Australia/Sydney").format("dddd, MMMM D, YYYY hh:mm A");
-//     // if (event.target.value.length > 0) {
-//     //     if (event.target.value === "paris") {
-//     //         alert(`It is ${parisTime} in Europe/Paris`);
-//     //     }
-//     //     if (event.target.value === "tokyo") {
-//     //         alert(`It is ${tokyoTime} in Asia/Tokyo`);
-//     //     }
-//     //     if (event.target.value === "sydney") {
-//     //         alert(`It is ${sydneyTime} in Australia/Sydney`);
-//     //     }
-//     // }
+updateTime();
+setInterval(updateTime, 1000);
 
-
-// let countriesSelect = document.querySelector("#counties");
-// countriesSelect.addEventListener("change", showSelectedCountry);

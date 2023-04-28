@@ -52,7 +52,7 @@ footer{
 
 .city:last-child{
     border: none;
-    padding: 0;
+    padding-bottom: 0;
 }
 
 .time{
