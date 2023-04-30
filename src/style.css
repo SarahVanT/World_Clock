@@ -85,27 +85,20 @@ footer a{
 }
 
 .backbutton a {
-    margin: 0 auto;
     background-color: #000000;
     color: #ffffff;
-    padding: 14px 24px 16px;
+    padding: 15px 20px;
     text-decoration: none;
     border-radius: 8px;
     font-size: 18px;
     font-weight: 700;
+    letter-spacing: 1px;
 }
 
   .backbutton a:hover {
-    margin: 0 auto;
     background-color: #ffffff;
     color: #000000;
-    padding: 14px 24px 16px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: 700;
     border: 2px solid black;
-
 }
 
 
